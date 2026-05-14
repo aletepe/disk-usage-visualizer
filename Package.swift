@@ -11,6 +11,11 @@ let package = Package(
             swiftSettings: [
                 .enableExperimentalFeature("StrictConcurrency")
             ]
+        ),
+        .testTarget(
+            name: "DiskUsageVisualizerTests",
+            dependencies: ["DiskUsageVisualizer"],
+            path: "Tests/DiskUsageVisualizerTests"
         )
     ]
 )

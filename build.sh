@@ -17,7 +17,7 @@ RESOURCES_DIR="$CONTENTS/Resources"
 echo "==> Building ($CONFIG)"
 swift build -c "$CONFIG" --arch arm64
 
-BIN_PATH="$(swift build -c "$CONFIG" --arch arm64 --show-bin-path)/$APP_NAME"
+BIN_PATH="$(swift build -c "$CONFIG" --show-bin-path)/$APP_NAME"
 if [ ! -f "$BIN_PATH" ]; then
     echo "Binary not found at $BIN_PATH" >&2
     exit 1
